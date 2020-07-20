@@ -16,6 +16,7 @@ func Test_addTwoNumbers(t *testing.T) {
 	}{
 		// TODO: Add test cases.
 		{
+			name: "even number of nodes",
 			args: args{
 				l1: &ListNode{1, &ListNode{2, &ListNode{3, nil}}},
 				l2: &ListNode{3, &ListNode{2, &ListNode{1, nil}}},
@@ -23,6 +24,15 @@ func Test_addTwoNumbers(t *testing.T) {
 			want: &ListNode{4, &ListNode{4, &ListNode{4, nil}}},
 		},
 		{
+			name: "odd number of nodes",
+			args: args{
+				l1: &ListNode{1, &ListNode{2, nil}},
+				l2: &ListNode{3, &ListNode{2, &ListNode{1, nil}}},
+			},
+			want: &ListNode{4, &ListNode{4, &ListNode{1, nil}}},
+		},
+		{	
+			name: "extra carry node",
 			args: args{
 				l1: &ListNode{1, &ListNode{2, &ListNode{9, nil}}},
 				l2: &ListNode{2, &ListNode{3, &ListNode{4, nil}}},
