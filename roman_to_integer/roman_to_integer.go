@@ -14,7 +14,7 @@ func romanToInt(s string) int {
 	var res int
 	var last int
 
-	for i, r := range s {
+	for _, r := range s {
 		num := m[r]
 		if last < num && last != 0 {
 			res += -last * 2
