@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func intToRoman(num int) string {
+func integerToRoman(num int) string {
 	var i int
 	var roman strings.Builder
 	pow10 := 1
